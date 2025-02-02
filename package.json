@@ -1,0 +1,19 @@
+{
+  "name": "obsidian-restic-backup",
+  "version": "0.1.0",
+  "description": "Backup your Obsidian vault to a Restic repository",
+  "main": "main.js",
+  "author": "Joshua Peek",
+  "license": "MIT",
+  "scripts": {
+    "test": "prettier --check . && tsc"
+  },
+  "dependencies": {
+    "obsidian": ">=1.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "prettier": "^3.4.0",
+    "typescript": "^5.7.0"
+  }
+}
