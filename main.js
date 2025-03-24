@@ -361,9 +361,14 @@ module.exports = (() => {
    */
   async function detectRestic() {
     const env = await getShellEnv();
-    const { stdout } = await execFile("which", ["restic"], { env });
-    const result = stdout.trim();
-    return result === "" ? null : result;
+    try {
+      const { stdout } = await execFile("which", ["restic"], { env });
+      const result = stdout.trim();
+      return result === "" ? null : result;
+    } catch (error) {
+      console.error(error);
+      return null;
+    }
   }
 
   /**
