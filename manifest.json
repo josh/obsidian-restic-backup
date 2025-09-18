@@ -1,7 +1,7 @@
 {
   "id": "obsidian-restic-backup",
   "name": "Restic Backup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minAppVersion": "1.6.0",
   "description": "Backup your Obsidian vault to a Restic repository.",
   "author": "Joshua Peek",
