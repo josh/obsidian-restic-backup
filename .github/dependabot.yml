@@ -5,6 +5,8 @@ updates:
     versioning-strategy: widen
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 14
     ignore:
       - dependency-name: "@types/*"
         update-types: ["version-update:semver-patch"]
@@ -13,3 +15,5 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 14
