@@ -2,22 +2,20 @@ name: Release
 
 on:
   push:
-    tags:
-      - "*"
+    tags: ["*"]
 
 permissions:
   contents: write
 
 jobs:
   release:
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-slim-amd64
 
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
       - name: Create release
         env:
-          GH_TOKEN: ${{ github.token }}
-          VERSION: ${{ github.ref_name }}
+          GITEA_TOKEN: ${{ gitea.token }}
         run: |
-          gh release create "$VERSION" --title="$VERSION" main.js manifest.json
+          gt release create "$GITEA_REF_NAME" main.js manifest.json --verify-tag

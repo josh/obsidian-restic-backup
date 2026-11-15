@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "rangeStrategy": "widen",
+  "packageRules": [
+    {
+      "matchPackageNames": ["@types/*"],
+      "matchUpdateTypes": ["patch"],
+      "enabled": false
+    }
+  ]
+}
