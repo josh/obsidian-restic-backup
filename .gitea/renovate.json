@@ -3,6 +3,10 @@
   "rangeStrategy": "widen",
   "packageRules": [
     {
+      "matchManagers": ["github-actions"],
+      "rangeStrategy": "replace"
+    },
+    {
       "matchPackageNames": ["@types/*"],
       "matchUpdateTypes": ["patch"],
       "enabled": false
