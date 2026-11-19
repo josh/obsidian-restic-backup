@@ -3,6 +3,7 @@
   "compilerOptions": {
     "strict": true,
     "noEmit": true,
+    "types": ["node"],
     "checkJs": true,
     "lib": ["ES2023", "DOM"]
   }
